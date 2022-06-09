@@ -4,16 +4,9 @@ The following is a mock-up cloud application built with `NodeJS` and `handlebars
 
 Clone the repository and while in the application's directory run `npm run start` to execute it on your local machine. All the files uploaded will be stored in the `files` directories.
 
-## Resources
-Class recordings
-Express documentation
-developers.mozilla
-GeekforGeeks
-W3schools
-StackOverflow
+## Demo
+![cloud-server-demo](https://user-images.githubusercontent.com/83131937/172952053-0f8a3b06-895f-47c7-b68d-c954fff27710.gif)
 
-## Special instructions
-
-### On Config
+### Config options
 - **cloudDir** must be the absolute path to the files directory that will be your cloud.
 - **maxFileSizeToUpload** is the file size limite in bytes.
