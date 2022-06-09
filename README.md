@@ -7,6 +7,6 @@ Clone the repository and while in the application's directory run `npm run start
 ## Demo
 ![cloud-server-demo](https://user-images.githubusercontent.com/83131937/172952053-0f8a3b06-895f-47c7-b68d-c954fff27710.gif)
 
-### Config options
-- **cloudDir** must be the absolute path to the files directory that will be your cloud.
-- **maxFileSizeToUpload** is the file size limite in bytes.
+### Config options (`lib/config.js`)
+- `cloudDir` must be the absolute path to the files directory that will be your cloud.
+- `maxFileSizeToUpload` is the file size limite in bytes.
