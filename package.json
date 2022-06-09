@@ -1,0 +1,26 @@
+{
+  "name": "cloud-server",
+  "version": "1.1.1",
+  "description": "Cloud Server Project",
+  "main": "lib/server.js",
+  "scripts": {
+    "start": "node lib/server.js",
+    "test": "jest"
+  },
+  "author": "Nestor Alfaro",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "session-file-store": "^1.5.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
+  }
+}

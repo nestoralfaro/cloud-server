@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestor's Cloud</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/cloud/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="{{currentDirectory}}../">
+          <span class="material-icons">arrow_back</span>
+        </a>
+        Current directory: <strong>{{currentDirectory}}</strong>
+      </header>
+      <form method="POST" enctype="multipart/form-data" class="form">
+        <input type="text" name="dir" class="new-dir-input" placeholder="Add new directory"/>
+        <input type="hidden" name="command" value="mkdir"/>
+        <label for="mkdir">
+          <span class="material-icons new-folder">
+            create_new_folder
+          </span>
+        </label>
+        <button id="mkdir" type="submit" hidden></button>
+      </form>
+      <hr>
+      <div class="entry">
+      {{#each files}}
+        {{#if isDirectory}}
+        <div>
+          <a href="{{path}}">
+            <span class="material-icons">folder</span>
+            {{name}}
+          </a>
+          <form method="POST" enctype="multipart/form-data" class="form" style="display: inline;">
+            <input type="hidden" name="command" value="rmdir" />
+            <input type="hidden" name="dir" value="{{name}}" />
+            <label for="{{name}}-rmdir">
+              <span class="material-icons">delete</span>
+            </label>
+            <button id="{{name}}-rmdir" type="submit" hidden></button>
+          </form>
+        </div>
+        {{else}}
+          <div>
+            <a href="{{name}}?download">
+              <span class="material-icons">file_download</span>
+            </a>
+            <a href="{{path}}">{{name}}</a>
+            <form method="POST" style="display: inline;">
+              <input type="hidden" name="command" value="rm" />
+              <input type="hidden" name="file" value="{{name}}" />
+              <label for="{{name}}-rm" >
+                <span class="material-icons">delete</span>
+              </label>
+              <button id="{{name}}-rm" type="submit" hidden></button>
+            </form>
+          </div>
+        {{/if}}
+      {{/each}}
+      </div>
+      <br>
+      <form method="POST" enctype="multipart/form-data" class="form">
+        Upload file: &nbsp;
+        <input type="file" name="file" class="upload-btn"/>
+        <input type="hidden" name="command" value="upload" />
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+  </body>
+</html>
