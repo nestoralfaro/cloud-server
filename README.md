@@ -3,7 +3,9 @@
 The following is a mock-up cloud application built with `NodeJS`, `Express` and `Handlebars`. You are able to delete directories, files, create directories, navigate through the directories, upload and download files, as well as viewing the files that your browser supports–e.g., .txt, .png, etc.
 
 Clone the repository and while in the application's directory run 
-```npm run start```
+```
+npm run start
+```
 To execute it on your local machine. All the files uploaded will be stored in the *files* directory.
 
 ## Demo
