@@ -11,6 +11,6 @@ To execute it on your local machine. All the files uploaded will be stored in th
 ## Demo
 ![cloud-server-demo](https://user-images.githubusercontent.com/83131937/172952053-0f8a3b06-895f-47c7-b68d-c954fff27710.gif)
 
-### Config options (*lib/config.js*)
+### Config options (_lib/config.js_)
 - `cloudDir` must be the absolute path to the files directory that will be your cloud.
 - `maxFileSizeToUpload` is the file size limite in bytes.
